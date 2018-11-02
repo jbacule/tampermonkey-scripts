@@ -4,7 +4,10 @@
 // @version      0.1
 // @description  Velcro detector in Amazon for item name, bullets and description
 // @author       Josh
-// @match        https://www.amazon.com/*
+// @match        https://www.amazon.com/dp/*
+// @match        https://www.amazon.com/gp/offer-listing/*
+// @match        https://www.amazon.com/*/dp/*
+// @match        https://www.amazon.com/product/*
 // @grant        GM_notification
 // @grant        GM_addStyle
 // @run-at       document-end
