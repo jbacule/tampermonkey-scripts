@@ -41,7 +41,7 @@ let pageDetails = "";
         //addFavicon();
         counter = 0; //set counter back to zero
     }else{
-        successIcon();
+        //successIcon();
         console.log("No Velcro found on Amazon!");
     }
 })();
