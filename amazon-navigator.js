@@ -1,18 +1,21 @@
 // ==UserScript==
-// @name         amazon-listing-navigator
+// @name         amazon-navigator
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://www.amazon.com/gp/offer-listing/*
+// @match        https://www.amazon.com/*
 // @grant        none
 // ==/UserScript==
 
 (function() {
     'use strict';
     document.body.onkeyup = function(e){
-        if(e.ctrlKey && e.keyCode == 13){ // ctrl key + enter
+        if(e.ctrlKey && e.keyCode == 37){ // ctrl key + enter
             document.querySelector('#olpProductImage > a').click();
+        }else if(e.ctrlKey && e.keyCode == 39){ // ctrl key + '+'
+            let asin = window.location.href.split('/')[5];
+            window.location.href = 'https://www.amazon.com/dp/offer-listing/'+asin;
         }
     }
 })();
