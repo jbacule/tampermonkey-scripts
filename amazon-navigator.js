@@ -1,3 +1,13 @@
+// ==UserScript==
+// @name         amazon-navigator
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://www.amazon.com/*
+// @grant        none
+// ==/UserScript==
+
 (function() {
     'use strict';
     document.body.onkeyup = function(e){
