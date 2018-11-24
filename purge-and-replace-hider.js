@@ -4,7 +4,6 @@
 // @version      0.1
 // @description  hide purge and replace area in seller central upload
 // @author       Josh
-// @match        https://www.amazon.com/*
 // @match        https://sellercentral.amazon.com/listing/*
 // @grant        GM_notification
 // ==/UserScript==
