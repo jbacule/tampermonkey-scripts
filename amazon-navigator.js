@@ -6,6 +6,7 @@
 // @author       You
 // @match        https://www.amazon.com/*
 // @grant        none
+// @run-at document-body
 // ==/UserScript==
 
 (function() {
