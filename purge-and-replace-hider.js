@@ -11,7 +11,8 @@
 (function() {
     'use strict';
     $(document).ready(function(){
-         if(window.location.href.indexOf('/listing/upload')>-1 || window.location.href.indexOf('/listing')>-1){
+        var uploadHeader = $('#tabs-addproducts-upload-heading').attr('class');
+        if( uploadHeader == 'a-tab-heading a-active'){
            $('#vlw-container > div.a-row > div.a-column.a-span9 > div.a-row.a-expander-container.a-expander-section-container.a-section-expander-container').hide();
            GM_notification( { title: "Reminder", text: "Purge and replace was hidden!", timeout: 3000, image: "https://img.icons8.com/color/64/000000/appointment-reminders.png" } );
          }
