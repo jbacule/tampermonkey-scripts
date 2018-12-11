@@ -5,7 +5,8 @@
 // @description  Velcro detector in Amazon for item name, bullets and description
 // @author       Josh
 // @match        https://www.amazon.com/dp/*
-// @match        https://www.amazon.com/gp/offer-listing/*
+// @match        https://www.amazon.com/gp/*
+// @match        https://www.amazon.com/*/gp/*
 // @match        https://www.amazon.com/*/dp/*
 // @match        https://www.amazon.com/product/*
 // @grant        GM_notification
@@ -16,7 +17,7 @@
 let findText = "Velcro";
 let vText = new RegExp('(\\w*' + findText + '\\w*)','gi');
 let counter = 0;
-let elementArray = ["productTitle","feature-bullets","productDescription","olpProductDetails"];
+let elementArray = ["productTitle","feature-bullets","productDescription","olpProductDetails", "aplus3p_feature_div"];
 let pageDetails = "";
 (function() {
     'use strict';
@@ -41,7 +42,7 @@ let pageDetails = "";
         //addFavicon();
         counter = 0; //set counter back to zero
     }else{
-        //successIcon();
+        successIcon();
         console.log("No Velcro found on Amazon!");
     }
 })();
@@ -62,7 +63,9 @@ function getDetail(elementID){
         return "Bullets";
     }else if(elementID=="productDescription"){
         return "Description";
-    }else{
+    }else if(elementID=="aplus3p_feature_div"){
+        return "EBC";
+     }else{
         return "Offer Listing Details"
     }
 }
@@ -87,4 +90,3 @@ function successIcon(){
     }
     catch(e) { }
 }
-
