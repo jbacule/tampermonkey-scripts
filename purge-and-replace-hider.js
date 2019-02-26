@@ -6,6 +6,7 @@
 // @author       Josh
 // @match        https://sellercentral.amazon.com/*
 // @grant        GM_notification
+// @run-at       document-start
 // ==/UserScript==
 
 (function() {
